@@ -16,7 +16,7 @@ lib/
 
 # Environment variables
 .env
-.env.*.local
+.env.*
 
 # IDE settings
 .vscode/
