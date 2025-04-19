@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔧 Formatting files..."
+pnpm format
+
+# Check if formatting made any changes
+if ! git diff --quiet; then
+  echo "❌ Formatting made changes. Please stage them and commit again."
+  git diff --name-only
+  exit 1
+fi
+
+echo "🔍 Linting files..."
+pnpm lint || {
+  echo "❌ Lint failed. Commit aborted."
+  exit 1
+}
+
+echo "✅ All good. Proceeding with commit."

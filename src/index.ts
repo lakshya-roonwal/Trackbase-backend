@@ -5,5 +5,5 @@ import http from 'http'
 const server = http.createServer(app)
 
 server.listen(port, () => {
-    console.log(`✅ Server is up and running at ${port}`)
+    console.log(`✅ Server is up and running at ${port} successfully`)
 })
