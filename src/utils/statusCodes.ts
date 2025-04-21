@@ -11,5 +11,5 @@ const status = {
     INTERNAL_SERVER_ERROR: 500,
     SERVICE_UNAVAILABLE: 503,
     GATEWAY_TIMEOUT: 504,
-}
-export default status
+};
+export default status;
